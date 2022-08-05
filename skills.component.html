@@ -1,0 +1,160 @@
+<br><br><br>
+<div class="skills" id="skills">
+    <div class="max-width">
+        <h2 class="title">My skills</h2>
+        <div class="skills-content">
+            <div class="bars">
+                <div class="info">
+                    <span>HTML</span>
+                    <span>85%</span>
+                </div>
+                <div class="line html"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>CSS</span>
+                    <span>70%</span>
+                </div>
+                <div class="line css"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>SQL</span>
+                    <span>75%</span>
+                </div>
+                <div class="line sql"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>Python</span>
+                    <span>60%</span>
+                </div>
+                <div class="line python"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>C</span>
+                    <span>75%</span>
+                </div>
+                <div class="line c"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>ANGULAR</span>
+                    <span>75%</span>
+                </div>
+                <div class="line angular"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="section" id="projects">
+    <div class="container cc-education">
+        <div class="h4 text-center mb-4 title">Projects</div>
+
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+        <div class="row">
+
+            <ng-container *ngFor="let project of projects| paginate: config">
+                <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="blog-entry">
+                        <div class="card">
+                            <img class="card-img-top" src={{project.imgUrl}} onerror="this.src = 'assets/images/gif.gif'" alt="Card image" style="width:100%">
+                            <div class="card-body">
+                                <h4 class="card-title">{{project.title}}</h4>
+                                <h5 class="card-text"><b>Technology :</b> {{project.tech}} </h5>
+                                <h5 class="card-text"><a href={{project.mediumlink}}>Read Blog on this  Project</a></h5>
+
+                                <a href={{project.livedemo}} class="btn btn-primary stretched-link ml-2 mr-5">Live Demo</a>
+                                <a href={{project.githurl}} class="btn btn-primary stretched-link">GithubLink</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+</div>-->
+<h2 class="title">Internships</h2>
+<div class="card">
+    <form [formGroup]="userForm">
+        <div class="mt-5 box">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Name of the Company</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="name" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Location</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="address" class="form-control" placeholder="Address">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Duration</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="duration" class="form-control" placeholder="Duration">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label>Domain</label>
+                    </div>
+                    <div class="form-row" style="margin-top:-10px">
+                        <div class="col">
+                            <input type="text" formControlName="domain" class="form-control" placeholder="Domain">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mt-4">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" (click)="addItem()">Add</button>&nbsp;
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="column-right">
+    <div class="col-md-8 mt-4 mb-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Duration</th>
+                    <th>Domain</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listData">
+                    <td><span>{{item.name}}</span></td>
+                    <td><span>{{item.address}}</span></td>
+                    <td><span>{{item.duration}}</span></td>
+                    <td><span>{{item.domain}}</span></td>
+                    <!--<td><button type="button" class="btn btn-primary" (click)="removeItem(item)">Remove</button></td>-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
